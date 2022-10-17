@@ -68,7 +68,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
-
+PGDATABASE="ritsika_db_sep_22"
+PGUSER="db_admin"
+PGPASSWORD="V3slYDd1nHQUyCDyiSY8"
+PGHOST="ritsika-test-db.c9rgthlwsgpn.ap-south-1.rds.amazonaws.com"
+PGPORT="5432"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -76,11 +80,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ["PGDATABASE"],
-        'USER': os.environ["PGUSER"],
-        'PASSWORD': os.environ["PGPASSWORD"],
-        'HOST': os.environ["PGHOST"],
-        'PORT': os.environ["PGPORT"],
+        'NAME': PGDATABASE,
+        'USER': PGUSER,
+        'PASSWORD': PGPASSWORD,
+        'HOST': PGHOST,
+        'PORT': PGPORT,
     }
 }
 
